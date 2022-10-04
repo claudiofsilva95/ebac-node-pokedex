@@ -8,8 +8,8 @@ const connect = () => {
   mongoose.connect('mongodb://localhost:27017/pokedex');
 }
 
-module.exports({
+module.exports = {
   connect,
   Pokemon,
-})
+}
 

@@ -1,6 +1,29 @@
 {
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
     "mongoose": "^6.6.4"
+  },
+  "name": "ebac-node-pokedex",
+  "description": "",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiofsilva95/ebac-node-pokedex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claudiofsilva95/ebac-node-pokedex/issues"
+  },
+  "homepage": "https://github.com/claudiofsilva95/ebac-node-pokedex#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

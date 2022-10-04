@@ -4,14 +4,13 @@ const express = require('express');
 const { Pokemon } = require('../models');
 const router = express.Router();
 
-router('/', (res) => {
+router.get('/', (_req, res) => {
   Pokemon.find().then( pokemons => {
-    res.render('paginas/pokemon/index', {
+    res.render('paginas/pokemons/index', {
       pokemons
     });
   });
 });
-
 
 
 module.exports = router;
