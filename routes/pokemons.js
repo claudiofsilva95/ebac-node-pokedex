@@ -1,9 +1,9 @@
-const exppress = require('express');
+const express = require('express');
 
-const { Pokemon } = require('../models')
-const router = exppress.router();
+const { Pokemon } = require('../models');
+const router = express.Router();
 
-router.get('/', (res) => {
+router.get('/', (_req, res) => {
     Pokemon.find().then(pokemons => {
         res.render('paginas/pokemons/index', {
             pokemons,
@@ -11,4 +11,4 @@ router.get('/', (res) => {
     });
 });
 
-module.express = router;
+module.exports = router;
