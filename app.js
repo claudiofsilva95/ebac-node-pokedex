@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const createError = require('http-errors');
 
@@ -8,7 +10,7 @@ const { connect } = require('./models');
 
 const pokemonsRouter = require('./routes/pokemons');
 const batalhaRouter = require('./routes/batalha');
-const capturaRouter = require('./routes/api/captura');
+const apiRouter = require('./routes/api');
 
 
 const app = express();
@@ -26,7 +28,7 @@ app.use('/pokemons', pokemonsRouter);
 app.use('/batalha', batalhaRouter);
 
 // declarando rotas api
-app.use('/api', capturaRouter);
+app.use('/api', apiRouter);
 
 // caso não de match em nenhuma, erro 404
 app.use((_req, _res, next) => {
